@@ -5,11 +5,9 @@
  */
 public inherited sharing class RegisterImportEmployeeUsecase {
 
-    public void execute(EmployeeDifferences differences) {
+    private EmployeeRepository employeeRepository = new EmployeeRepository();
 
-        // Employee ee = new Employee();
-        // ee.name = 'saburo';
-        // System.debug(ee.name);
-        return;
+    public void execute(EmployeeDifferences differences) {
+        employeeRepository.store(differences);
     }
 }

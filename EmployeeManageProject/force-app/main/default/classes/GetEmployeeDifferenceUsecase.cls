@@ -4,8 +4,13 @@
  */
 public inherited sharing class GetEmployeeDifferenceUsecase {
 
-    // 画面から入力した新しい社員情報は csvファイルのテキスト情報からコンバートされた後としている。
+    private EmployeeRepository employeeRepository = new EmployeeRepository();
+
+    // 引数：importEmployeesについて
+    //  画面から入力した新しい社員情報は csvファイルのテキスト情報からコンバートされた後としています。
     public EmployeeDifferences execute(ImportEmployees importEmployees) {
-        return null;
+
+        Employees employees = employeeRepository.getAll();
+        return importEmployees.getDifferences(employees);
     }
 }

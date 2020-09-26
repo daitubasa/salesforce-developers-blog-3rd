@@ -1,7 +1,7 @@
 public class EmployeeDifference {
 
-    private ImportEmployee importEmployee;
-    private Employee employee;
+    public ImportEmployee importEmployee {get; private set;}
+    public Employee employee {get; private set;}
     
     public EmployeeDifference(ImportEmployee importEmployee, Employee employee) {
         if(importEmployee == null && employee == null) {
@@ -17,10 +17,25 @@ public class EmployeeDifference {
     public boolean isDeleted() {
         return importEmployee == null && employee != null;
     }
-    public boolean isDifference() {
-        return false; // TODO: あとで実装
+    public boolean isChange() {
+        if(importEmployee == null || employee == null) return false;
+
+        if(importEmployee.name != employee.name) return true;
+        if(importEmployee.kana != employee.kana) return true;
+        if(importEmployee.code != employee.code) return true;
+
+        if(importEmployee.hireDate != employee.hireDate) return true;
+        if(importEmployee.retirementDate != employee.retirementDate) return true;
+        String employeeBelongGroupCode = employee.belongGroup == null ? '' : employee.belongGroup.code;
+        if(importEmployee.belongGroupCode != employeeBelongGroupCode) return true;
+
+        if(importEmployee.imageURL != employee.image.toExternalForm()) return true;
+        if(importEmployee.twitterURL != employee.twitter.toExternalForm()) return true;
+        if(importEmployee.youTubeURL != employee.youTube.toExternalForm()) return true;
+        if(importEmployee.fanNickname != employee.fanNickname) return true;
+        return false;
     }
     public boolean hasDifference() {
-        return (isNew() || isDeleted() || isDifference()) ? true : false;
+        return (isNew() || isDeleted() || isChange()) ? true : false;
     }
 }

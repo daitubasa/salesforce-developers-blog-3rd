@@ -14,5 +14,14 @@ public class EmployeeDifferences implements iterable<EmployeeDifference> {
     public Iterator<EmployeeDifference> Iterator(){
         return my_list.iterator();
     }
-    
+
+    public EmployeeDifferences excludeNoDifference() {
+        List<EmployeeDifference> newList = new List<EmployeeDifference>();
+        for(EmployeeDifference difference : my_list) {
+            if(difference.hasDifference()) {
+                newList.add(difference);
+            }
+        }
+        return new EmployeeDifferences(newList);
+    }
 }
