@@ -29,6 +29,16 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
+        <members>Employee__c</members>
+        <members>Group__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Employee__c-社員レイアウト</members>
+        <members>Group__c-グループレイアウト</members>
+        <name>Layout</name>
+    </types>
+    <types>
         <members>*</members>
         <name>StaticResource</name>
     </types>
