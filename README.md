@@ -1,2 +1,2 @@
-# salesforce-developers-blog-3rd
-Salesforce 開発者向けブログ投稿キャンペーン 第3弾 開催のお知らせ
+# Salesforce 開発者向けブログ投稿キャンペーン 第3弾　ソース一式
+Salesforce 開発者向けブログ投稿キャンペーン 第3弾向けのブログ記事で紹介したソースコードの一式です。
