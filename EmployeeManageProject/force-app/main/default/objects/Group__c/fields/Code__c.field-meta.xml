@@ -3,7 +3,7 @@
     <fullName>Code__c</fullName>
     <caseSensitive>false</caseSensitive>
     <externalId>true</externalId>
-    <label>コード</label>
+    <label>グループコード</label>
     <length>2</length>
     <required>true</required>
     <trackHistory>false</trackHistory>

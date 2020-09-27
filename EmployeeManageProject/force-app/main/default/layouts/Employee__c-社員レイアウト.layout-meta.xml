@@ -18,7 +18,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Kana__c</field>
             </layoutItems>
             <layoutItems>
@@ -34,7 +34,7 @@
         <label>属性情報</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>HireDate__c</field>
             </layoutItems>
             <layoutItems>

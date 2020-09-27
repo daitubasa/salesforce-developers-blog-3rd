@@ -3,7 +3,7 @@
     <fullName>HireDate__c</fullName>
     <externalId>false</externalId>
     <label>入社日</label>
-    <required>false</required>
+    <required>true</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Date</type>
