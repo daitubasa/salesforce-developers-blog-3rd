@@ -29,14 +29,30 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
+        <members>*</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>hololive</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>Employee__c</members>
         <members>Group__c</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>Employee__c-社員レイアウト</members>
         <members>Group__c-グループレイアウト</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
     </types>
     <types>
         <members>*</members>
