@@ -1,4 +1,3 @@
-
 // 本来はインターフェイスで定義し実装は別クラスで定義なのですが端折っております。許して
 public inherited sharing class EmployeeRepository {
 
