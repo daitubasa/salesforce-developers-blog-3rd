@@ -1,0 +1,21 @@
+<apex:page controller="ApexTestRunResultListController" lightningStylesheets="true">
+    <h1>ApexTestRunResult の内容をただ確認したいだけ</h1>
+    <apex:pageBlock title="ApexTestRunResult">
+        <apex:pageBlockTable value="{!testRunResults}" var="item">
+            <apex:column value="{!item.AsyncApexJobId}" />
+            <apex:column value="{!item.ClassesCompleted}" />
+            <apex:column value="{!item.ClassesEnqueued}" />
+            <apex:column value="{!item.EndTime}" />
+            <apex:column value="{!item.IsAllTests}" />
+            <apex:column value="{!item.JobName}" />
+            <apex:column value="{!item.MethodsCompleted}" />
+            <apex:column value="{!item.MethodsEnqueued}" />
+            <apex:column value="{!item.MethodsFailed}" />
+            <apex:column value="{!item.Source}" />
+            <apex:column value="{!item.StartTime}" />
+            <apex:column value="{!item.Status}" />
+            <apex:column value="{!item.TestTime}" />
+            <apex:column value="{!item.UserId}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

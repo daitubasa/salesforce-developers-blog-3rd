@@ -4,7 +4,9 @@ public with sharing class ApexTestResultListController {
     public ApexTestResultListController() {
         this.testResults = [
             select 
-                ApexClassId, ApexLogId 
+                ApexClassId, ApexLogId, ApexTestRunResultId, AsyncApexJobId
+                , Message, MethodName, Outcome, QueueItemId, RunTime
+                , StackTrace, TestTimestamp
             from ApexTestResult
         ];
     }
