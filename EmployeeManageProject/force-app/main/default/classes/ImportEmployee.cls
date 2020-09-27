@@ -48,4 +48,21 @@ public class ImportEmployee {
     public EmployeeDifference getDifference(Employee employee) {
         return new EmployeeDifference(this, employee);
     }
+
+    public override String toString() {
+        String str = '';
+        str += String.format('コード:{0}, ', new List<Object> {code});
+        str += String.format('氏名:{0}, ', new List<Object> {name});
+        str += String.format('かな:{0}, ', new List<Object> {kana});
+
+        str += String.format('入社日:{0}, ', new List<Object> {hireDate});
+        str += String.format('退社日:{0}, ', new List<Object> {retirementDate});
+        str += String.format('所属グループ:{0}, ', new List<Object> {belongGroupCode});
+
+        str += String.format('画像URL:{0}, ', new List<Object> {imageURL});
+        str += String.format('twitter:{0}, ', new List<Object> {twitterURL});
+        str += String.format('youTube:{0}, ', new List<Object> {youTubeURL});
+        str += String.format('ファン愛称:{0}, ', new List<Object> {fanNickname});
+        return str;
+    }
 }

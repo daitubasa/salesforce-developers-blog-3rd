@@ -41,7 +41,7 @@ private class RegisterEmployeeTest {
     }
 
     @isTest 
-    static void testMethod01() {
+    static void testNormal01() {
         Profile profile = getProfile('システム管理者');
         String uniqueUserName = 'RegisterEmployeeTest' + DateTime.now().getTime() + '@example.com';
         User u = registerUser(profile, uniqueUserName);
@@ -54,18 +54,28 @@ private class RegisterEmployeeTest {
             // ユーザが画面から新しい社員情報を入力、salesforceに登録されている情報と比較した結果を返す。
             ImportEmployees importEmployees = createTestImportEmployeeData();
             EmployeeDifferences differences = getEmployeeDifferenceUsecase.execute(importEmployees);
+            for(Iterator<EmployeeDifference> iterator = differences.Iterator(); iterator.hasNext();) { // 情報が多いため EmployeeDifferences そのものを指定すると途中で切り取られる。要素ごとにデバッグ出力
+                EmployeeDifference difference = iterator.next();
+                System.debug('■■' + difference);
+                System.debug('■■■■' + difference.importEmployee);
+                System.debug('■■■■' + difference.employee);
+            }
+
             // ユーザが画面上で社員情報の比較結果を確認した後、入力した社員情報の登録を行う。
             differences = differences.excludeNoDifference();
             registerImportEmployeeUsecase.execute(differences);
             Test.stopTest();
 
             List<Employee__c> employees = [select Id, Code__c, Name from Employee__c order by Code__c];
+            for(Employee__c employee : employees) { // 情報が多いため EmployeeDifferences そのものを指定すると途中で切り取られる。要素ごとにデバッグ出力
+                System.debug('■■■■' + employee);
+            }
             System.assertEquals(5, employees.size(), '社員数が一致していない');
         }
-
     }
+
     @isTest 
-    static void testMethod02() {
+    static void testNormal02() {
         Profile profile = getProfile('システム管理者_設定・定義を参照するヌキ');
         String uniqueUserName = 'RegisterEmployeeTest' + DateTime.now().getTime() + '@example.com';
         User u = registerUser(profile, uniqueUserName);
@@ -86,7 +96,77 @@ private class RegisterEmployeeTest {
             List<Employee__c> employees = [select Id, Code__c, Name from Employee__c order by Code__c];
             System.assertEquals(5, employees.size(), '社員数が一致していない');
         }
+    }
 
+    @isTest 
+    static void testAllNew() {
+
+        delete [select Id, Code__c, Name from Employee__c order by Code__c]; // 事前に削除
+
+        Profile profile = getProfile('システム管理者');
+        String uniqueUserName = 'RegisterEmployeeTest' + DateTime.now().getTime() + '@example.com';
+        User u = registerUser(profile, uniqueUserName);
+        System.runAs(u) {
+    
+            GetEmployeeDifferenceUsecase getEmployeeDifferenceUsecase = new GetEmployeeDifferenceUsecase();
+            RegisterImportEmployeeUsecase registerImportEmployeeUsecase = new RegisterImportEmployeeUsecase();
+    
+            Test.startTest();
+            // ユーザが画面から新しい社員情報を入力、salesforceに登録されている情報と比較した結果を返す。
+            ImportEmployees importEmployees = createTestImportEmployeeData();
+            EmployeeDifferences differences = getEmployeeDifferenceUsecase.execute(importEmployees);
+            for(Iterator<EmployeeDifference> iterator = differences.Iterator(); iterator.hasNext();) { // 情報が多いため EmployeeDifferences そのものを指定すると途中で切り取られる。要素ごとにデバッグ出力
+                EmployeeDifference difference = iterator.next();
+                System.debug('■■' + difference);
+                System.debug('■■■■' + difference.importEmployee);
+                System.debug('■■■■' + difference.employee);
+            }
+
+            // ユーザが画面上で社員情報の比較結果を確認した後、入力した社員情報の登録を行う。
+            differences = differences.excludeNoDifference();
+            registerImportEmployeeUsecase.execute(differences);
+            Test.stopTest();
+
+            List<Employee__c> employees = [select Id, Code__c, Name from Employee__c order by Code__c];
+            for(Employee__c employee : employees) { // 情報が多いため EmployeeDifferences そのものを指定すると途中で切り取られる。要素ごとにデバッグ出力
+                System.debug('■■■■' + employee);
+            }
+            System.assertEquals(5, employees.size(), '社員数が一致していない');
+        }
+    }
+
+    @isTest 
+    static void testAllDelete() {
+        Profile profile = getProfile('システム管理者');
+        String uniqueUserName = 'RegisterEmployeeTest' + DateTime.now().getTime() + '@example.com';
+        User u = registerUser(profile, uniqueUserName);
+        System.runAs(u) {
+    
+            GetEmployeeDifferenceUsecase getEmployeeDifferenceUsecase = new GetEmployeeDifferenceUsecase();
+            RegisterImportEmployeeUsecase registerImportEmployeeUsecase = new RegisterImportEmployeeUsecase();
+    
+            Test.startTest();
+            // ユーザが画面から新しい社員情報を入力、salesforceに登録されている情報と比較した結果を返す。
+            ImportEmployees importEmployees = new ImportEmployees(); // 入力は空
+            EmployeeDifferences differences = getEmployeeDifferenceUsecase.execute(importEmployees);
+            for(Iterator<EmployeeDifference> iterator = differences.Iterator(); iterator.hasNext();) { // 情報が多いため EmployeeDifferences そのものを指定すると途中で切り取られる。要素ごとにデバッグ出力
+                EmployeeDifference difference = iterator.next();
+                System.debug('■■' + difference);
+                System.debug('■■■■' + difference.importEmployee);
+                System.debug('■■■■' + difference.employee);
+            }
+
+            // ユーザが画面上で社員情報の比較結果を確認した後、入力した社員情報の登録を行う。
+            differences = differences.excludeNoDifference();
+            registerImportEmployeeUsecase.execute(differences);
+            Test.stopTest();
+
+            List<Employee__c> employees = [select Id, Code__c, Name from Employee__c order by Code__c];
+            for(Employee__c employee : employees) { // 情報が多いため EmployeeDifferences そのものを指定すると途中で切り取られる。要素ごとにデバッグ出力
+                System.debug('■■■■' + employee);
+            }
+            System.assertEquals(5, employees.size(), '社員数が一致していない');
+        }
     }
 
     private static ImportEmployees createTestImportEmployeeData() {

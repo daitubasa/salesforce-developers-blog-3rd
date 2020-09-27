@@ -24,4 +24,14 @@ public class EmployeeDifferences implements iterable<EmployeeDifference> {
         }
         return new EmployeeDifferences(newList);
     }
+
+    public override String toString() {
+        String str = '';
+        Integer i = 0;
+        for(EmployeeDifference difference : my_list) {
+            str += String.format('[{0}]:\'{\'{1}\'}\', ', new List<Object> {i, difference});
+            i++;
+        }
+        return str;
+    }
 }

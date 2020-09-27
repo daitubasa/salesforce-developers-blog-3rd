@@ -18,7 +18,7 @@ public class EmployeeDifference {
         return importEmployee == null && employee != null;
     }
     public boolean isChange() {
-        if(importEmployee == null || employee == null) return false;
+        if(isNew() || isDeleted()) return false;
 
         if(importEmployee.name != employee.name) return true;
         if(importEmployee.kana != employee.kana) return true;
@@ -37,5 +37,16 @@ public class EmployeeDifference {
     }
     public boolean hasDifference() {
         return (isNew() || isDeleted() || isChange()) ? true : false;
+    }
+
+    public override String toString() {
+        String str = '';
+        str += String.format('hasDifference():{0}, ', new List<Object> {hasDifference()});
+        str += String.format('isNew():{0}, ', new List<Object> {isNew()});
+        str += String.format('isDeleted():{0}, ', new List<Object> {isDeleted()});
+        str += String.format('isChange():{0}, ', new List<Object> {isChange()});
+        str += String.format('ImportEmployee:\'{\'{0}\'}\', ', new List<Object> {importEmployee});
+        str += String.format('Employee:\'{\'{0}\'}\', ', new List<Object> {employee});
+        return str;
     }
 }

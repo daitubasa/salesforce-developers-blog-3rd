@@ -8,7 +8,7 @@ public class EmployeeConverter {
             employees.add(
                 new Employee(
                     emp.Id, emp.Name, emp.Kana__c, emp.Code__c, emp.HireDate__c, emp.RetirementDate__c
-                    , new GroupMaster(emp.Group__r.Id, emp.Group__r.Name, emp.Group__r.Code__c, emp.Group__r.SortOrder__c.intValue())
+                    , new GroupMaster(emp.Group__r.Id, emp.Group__r.Code__c, emp.Group__r.Name, emp.Group__r.SortOrder__c.intValue())
                     , emp.ImageURL__c, emp.Twitter__c, emp.YouTube__c, emp.FanNickname__c
                 )
             );
