@@ -40,10 +40,10 @@ public class ImportEmployee {
         for(Iterator<Employee> iterator = employees.Iterator(); iterator.hasNext();) {
             Employee employee = iterator.next();
             if(this.code == employee.code) {
-                return getDifference(this, employee);
+                return getDifference(employee);
             }
         }
-        return getDifference(null);
+        return getDifference((Employee)null);
     }
     public EmployeeDifference getDifference(Employee employee) {
         return new EmployeeDifference(this, employee);
