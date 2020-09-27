@@ -104,7 +104,7 @@ private class RegisterEmployeeTest {
             , new ImportEmployee('白銀ノエル', 'しろがねのえる', '000034', Date.newInstance(2019,8,8), null, '03'
                 , 'https://yt3.ggpht.com/a/AATXAJyflKVfVjZg11sLPRv8BrLT-8ltdeRcTyKTWlXV=s288-c-k-c0xffffffff-no-rj-mo'
                 , 'https://twitter.com/shiroganenoel', 'https://www.youtube.com/channel/UCdyqAaZDKHXg4Ahi7VENThQ', '白銀聖騎士団')
-            , new ImportEmployee('宝鐘マリソ', 'ほうしょうまりん', '000035', Date.newInstance(2019,8,11), null, '03'
+            , new ImportEmployee('宝鐘マリン', 'ほうしょうまりん', '000035', Date.newInstance(2019,8,11), null, '03'
                 , 'https://yt3.ggpht.com/a/AATXAJwAAoZPNqrR0udm1KMznPYUUTbW-sERt_LZU-af=s288-c-k-c0xffffffff-no-rj-mo'
                 , 'https://twitter.com/houshoumarine', 'https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg', '宝鐘の一味')
         };
