@@ -1,0 +1,9 @@
+<apex:page controller="ApexTestResultListController" lightningStylesheets="true">
+  <h1>ApexTestResult の内容をただ確認したいだけ</h1>
+  <apex:pageBlock title="ApexTestResultの内容">
+        <apex:pageBlockTable value="{!testResults}" var="item">
+            <apex:column value="{!item.ApexClassId}"/>
+            <apex:column value="{!item.ApexLogId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
