@@ -1,5 +1,5 @@
 public class GroupCode {
-    private String value;
+    private String value {get; private set;}
 
     public GroupCode(String value) {
         if(value == null) throw new IllegalArgumentException('引数が null');
@@ -12,7 +12,7 @@ public class GroupCode {
         }
         if (obj != null && obj instanceof GroupCode) {
             GroupCode other = (GroupCode)obj;
-            return value.equals(other);
+            return value.equals(other.value);
         }
         return false;
     }

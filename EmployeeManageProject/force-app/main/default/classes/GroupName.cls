@@ -1,5 +1,5 @@
 public class GroupName {
-    private String value;
+    private String value {get; private set;}
 
     public GroupName(String value) {
         if(value == null) throw new IllegalArgumentException('引数が null');
@@ -12,7 +12,7 @@ public class GroupName {
         }
         if (obj != null && obj instanceof GroupName) {
             GroupName other = (GroupName)obj;
-            return value.equals(other);
+            return value.equals(other.value);
         }
         return false;
     }
