@@ -26,8 +26,7 @@ public class EmployeeDifference {
 
         if(importEmployee.hireDate != employee.hireDate) return true;
         if(importEmployee.retirementDate != employee.retirementDate) return true;
-        String employeeBelongGroupCode = employee.belongGroup == null ? '' : employee.belongGroup.code;
-        if(importEmployee.belongGroupCode != employeeBelongGroupCode) return true;
+        if(importEmployee.belongGroupCode != employee.belongGroup.code.toString()) return true;  // TODO: 一旦toString() で比較、後で修正
 
         if(importEmployee.imageURL != employee.image.toExternalForm()) return true;
         if(importEmployee.twitterURL != employee.twitter.toExternalForm()) return true;

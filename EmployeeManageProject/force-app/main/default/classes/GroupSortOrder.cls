@@ -1,4 +1,4 @@
-public with sharing class GroupSortOrder {
+public class GroupSortOrder {
     private Integer value {get; private set;}
 
     public GroupSortOrder(Integer value) {
