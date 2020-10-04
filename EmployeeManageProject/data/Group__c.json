@@ -1,0 +1,67 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef1"
+            },
+            "Code__c": "00",
+            "Name": "0期生",
+            "SortOrder__c": 10
+        },
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef2"
+            },
+            "Code__c": "01",
+            "Name": "1期生",
+            "SortOrder__c": 20
+        },
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef3"
+            },
+            "Code__c": "02",
+            "Name": "2期生",
+            "SortOrder__c": 30
+        },
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef4"
+            },
+            "Code__c": "03",
+            "Name": "3期生",
+            "SortOrder__c": 50
+        },
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef5"
+            },
+            "Code__c": "04",
+            "Name": "4期生",
+            "SortOrder__c": 60
+        },
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef6"
+            },
+            "Code__c": "05",
+            "Name": "5期生",
+            "SortOrder__c": 70
+        },
+        {
+            "attributes": {
+                "type": "Group__c",
+                "referenceId": "Group__cRef7"
+            },
+            "Code__c": "GA",
+            "Name": "ゲーマーズ",
+            "SortOrder__c": 40
+        }
+    ]
+}

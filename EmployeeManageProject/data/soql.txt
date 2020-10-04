@@ -1,0 +1,8 @@
+-- グループを取得する
+sfdx force:data:tree:export -q "select Id, Code__c, Name, SortOrder__c from Group__c order by Code__c" -d data
+
+-- 社員を取得する
+sfdx force:data:tree:export -q "select Id, Code__c, Name, Kana__c, Group__c, Group__r.Code__c, Group__r.Name, Group__r.SortOrder__c, Twitter__c, YouTube__c, FanNickname__c, ImageURL__c, HireDate__c, RetirementDate__c \
+from Employee__c order by Code__c" -d data
+
+

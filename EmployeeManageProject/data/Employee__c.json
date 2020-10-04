@@ -1,0 +1,130 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Employee__c",
+                "referenceId": "Employee__cRef1"
+            },
+            "Code__c": "000004",
+            "Name": "星街すいせい",
+            "Kana__c": "ほしまちすいせい",
+            "Group__r": {
+                "attributes": {
+                    "type": "Group__c",
+                    "url": "/services/data/v49.0/sobjects/Group__c/a1R4W0000046sCpUAI"
+                },
+                "Code__c": "00"
+            },
+            "Twitter__c": "https://twitter.com/suisei_hosimati",
+            "YouTube__c": "https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A",
+            "FanNickname__c": "星詠み",
+            "ImageURL__c": "https://yt3.ggpht.com/a/AATXAJzbRjSTNu3QQ7pia2yR5oVTcds7MpmeA3a1xE-h=s100-c-k-c0xffffffff-no-rj-mo",
+            "HireDate__c": "2018-03-22"
+        },
+        {
+            "attributes": {
+                "type": "Employee__c",
+                "referenceId": "Employee__cRef2"
+            },
+            "Code__c": "000011",
+            "Name": "夜空メル",
+            "Kana__c": "よぞらめる",
+            "Group__r": {
+                "attributes": {
+                    "type": "Group__c",
+                    "url": "/services/data/v49.0/sobjects/Group__c/a1R4W0000046sCaUAI"
+                },
+                "Code__c": "01"
+            },
+            "Twitter__c": "https://twitter.com/yozoramel",
+            "YouTube__c": "https://www.youtube.com/channel/UCD8HOxPs4Xvsm8H0ZxXGiBw",
+            "FanNickname__c": "かぷ民",
+            "ImageURL__c": "https://yt3.ggpht.com/a/AATXAJxGYXGi2fgjHoYCSuqLzsh6p-CrlNvRTRFmZmK_=s100-c-k-c0xffffffff-no-rj-mo",
+            "HireDate__c": "2018-05-13"
+        },
+        {
+            "attributes": {
+                "type": "Employee__c",
+                "referenceId": "Employee__cRef3"
+            },
+            "Code__c": "000013",
+            "Name": "赤井はあと",
+            "Kana__c": "あかいはあと",
+            "Group__r": {
+                "attributes": {
+                    "type": "Group__c",
+                    "url": "/services/data/v49.0/sobjects/Group__c/a1R4W0000046sCaUAI"
+                },
+                "Code__c": "01"
+            },
+            "Twitter__c": "https://twitter.com/akaihaato",
+            "YouTube__c": "https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg",
+            "FanNickname__c": "はあとん",
+            "ImageURL__c": "https://yt3.ggpht.com/a/AATXAJw3IoOJZlLAn_Eyy0r6gJHR3vt64XHfuXCailaCPw=s100-c-k-c0xffffffff-no-rj-mo",
+            "HireDate__c": "2018-06-02"
+        },
+        {
+            "attributes": {
+                "type": "Employee__c",
+                "referenceId": "Employee__cRef4"
+            },
+            "Code__c": "000014",
+            "Name": "白上フブキ",
+            "Kana__c": "しらかみふぶき",
+            "Group__r": {
+                "attributes": {
+                    "type": "Group__c",
+                    "url": "/services/data/v49.0/sobjects/Group__c/a1R4W0000046sCaUAI"
+                },
+                "Code__c": "01"
+            },
+            "Twitter__c": "https://twitter.com/shirakamifubuki",
+            "YouTube__c": "https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg",
+            "FanNickname__c": "すこん部",
+            "ImageURL__c": "https://yt3.ggpht.com/a/AATXAJztvRXzNX8UtsaUZfLLBh32VBBwNPcvy_TklUjnWA=s100-c-k-c0xffffffff-no-rj-mo",
+            "HireDate__c": "2018-06-01"
+        },
+        {
+            "attributes": {
+                "type": "Employee__c",
+                "referenceId": "Employee__cRef5"
+            },
+            "Code__c": "000021",
+            "Name": "湊あくあ",
+            "Kana__c": "みなとあくあ",
+            "Group__r": {
+                "attributes": {
+                    "type": "Group__c",
+                    "url": "/services/data/v49.0/sobjects/Group__c/a1R4W0000046sCfUAI"
+                },
+                "Code__c": "02"
+            },
+            "Twitter__c": "https://twitter.com/minatoaqua",
+            "YouTube__c": "https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg",
+            "FanNickname__c": "あくあクルー",
+            "ImageURL__c": "https://yt3.ggpht.com/a/AATXAJxXeCPuSGxq-_NfKX4WSpCf7FtnOkPNzHd2s9Sh9g=s100-c-k-c0xffffffff-no-rj-mo",
+            "HireDate__c": "2018-08-18"
+        },
+        {
+            "attributes": {
+                "type": "Employee__c",
+                "referenceId": "Employee__cRef6"
+            },
+            "Code__c": "000025",
+            "Name": "大空スバル",
+            "Kana__c": "おおぞらすばる",
+            "Group__r": {
+                "attributes": {
+                    "type": "Group__c",
+                    "url": "/services/data/v49.0/sobjects/Group__c/a1R4W0000046sCfUAI"
+                },
+                "Code__c": "02"
+            },
+            "Twitter__c": "https://twitter.com/oozorasubaru",
+            "YouTube__c": "https://www.youtube.com/channel/UCvzGlP9oQwU--Y0r9id_jnA",
+            "FanNickname__c": "スバ友",
+            "ImageURL__c": "https://yt3.ggpht.com/a/AATXAJx_CMc_Ne4b93d6Hr3nMSqLbijvq6UxzPO8apsk=s100-c-k-c0xffffffff-no-rj-mo",
+            "HireDate__c": "2018-07-02"
+        }
+    ]
+}
